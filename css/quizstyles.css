@@ -4,18 +4,29 @@
 
 body, html {
     background: -webkit-linear-gradient(#A1FFCE, #FAFFD1) no-repeat center center fixed;
-    height: 100%;
-    width: 100%;
+    height: 100%
 }
+
+/*---------------------------------------------------Flex Container---------------------------------------------------------------------------------------*/
+
+.container {
+    margin: 0 auto;
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*---------------------------------------------------Content---------------------------------------------------------------------------------------*/
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
-    width: 900px;
+    margin-top: 0px;
+    margin-bottom: 15px;
     height: 65px;
+    width: 100%px;
     border: 1px solid black; 
     border-radius: 10px;
 }
@@ -33,24 +44,35 @@ nav {
 
 .score {
     position: absolute;
+    display: inline;
+
 }
 
 img {
     display: block;
-    margin: 30px auto;
+    margin: 0px;
     border: 1px solid black;
     border-radius: 10px;
-    height: 400px;
-    width: 900px;
+    height: 480px;
+    width: 100%;
 }
 
 h2 {
     font-family: Tahoma;
-    transform: translateX(20%);
+    margin: 0px;
 }
 
+hr {
+    margin: 10px 0;
+    border: 2px solid black;
+    width: 100%;
+}
+
+/*---------------------------------------------------Question Table---------------------------------------------------------------------------------------*/
+
 table {
-    border-spacing: 40px;
+    width: 900px;
+    border-spacing: 20px;
     margin: 0 auto;
 }
 
@@ -70,9 +92,10 @@ button:hover {
     background-color: #353BAE;
     color: white;
     text-decoration: underline;
+    cursor: pointer;
 }
 
-/*---------------------------------------------------Overlay CSS---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------Lightbox CSS---------------------------------------------------------------------------------------*/
 
 .answer-box {
     display: none;
@@ -98,7 +121,7 @@ button:hover {
     width: 37%;
 }
 
-.description {
+.table-description {
     position: absolute;
     top: 63.5%;
     left: 1%;
@@ -133,6 +156,8 @@ button:hover {
     border: 1px solid black;   
 }
 
+/*------------------------------------------Map Box Related-------------------------------------------------------------------------------------------------------------------*/
+
 .goToLocation {
     z-index: 1;
     font-family: Tahoma;
@@ -149,10 +174,12 @@ button:hover {
     padding-top: 4px;
 }
 
+/*------------------------------------------Exiting LightBox-------------------------------------------------------------------------------------------------------------------*/
+
 .next {
     position: relative;
     top: 29%;
-    left: 62%;
+    left: 64%;
 }
 
 .next button {

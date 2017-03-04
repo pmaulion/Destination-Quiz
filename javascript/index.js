@@ -41,6 +41,13 @@ var questionNumber = 0;
             map.flyTo({
                 center: [4.352414, 50.846732],
             });   
+
+            // Switches current question number img to either Correct or Incorrect PNG
+            $("#circle-1").attr("src", "images/checked.png");
+
+            // Remove pulse effect and add pre-pulse effect
+            $("#circle-1-pulse").removeClass("question-pulse");
+            $("#circle-1-pulse").addClass("pre-question-pulse");
         };
 
 /*------------------------------------------Exit Lightbox-------------------------------------------------------------------------------------------------------------------*/

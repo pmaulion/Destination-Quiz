@@ -144,17 +144,6 @@ button:hover {
     width: 37%;
 }
 
-.table-description {
-    position: absolute;
-    top: 63.5%;
-    left: 1%;
-    background-color: white;
-    border: 1px solid black;
-    border-bottom-left-radius: 5px;
-    height: 35%;
-    width: 60%;
-}
-
 .answer-pic {
     position: relative;
     top: 2%;
@@ -169,16 +158,81 @@ button:hover {
     width: 60%;
 }
 
-.answer-verdict {
+/*------------------------------------------Answer Box-------------------------------------------------------------------------------------------------------------------*/
+
+#answer-verdict {
+    padding: 30px 5px 0px 5px;
     position: absolute;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 36px;
     width: 37%;
-    height: 15%;
+    height: 23%;
     left: 62%;
     top: 63.5%;
+    color: #007F0A;
     background-color: white;
+    opacity: .8;
     border: 1px solid black;   
+    border-radius: 5px;
 }
 
+/*------------------------------------------Light Box Description Table-------------------------------------------------------------------------------------------------------------------*/
+
+.table-description {
+    position: absolute;
+    top: 63.5%;
+    left: 1%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 35%;
+    width: 60%;
+}
+
+.answer-table {
+    border: 1px solid black;
+    border-spacing: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+#label-1 {
+    background-color: #353BAE;
+    border-top-left-radius: 5px;
+    color: white;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#label-2 {
+    background-color: #353BAE;
+    border-top-right-radius: 5px;
+    color: white;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.answer-table td {
+    border: 1px solid black;
+    padding-left: 20px;
+}
+
+.category-table {
+    width: 40%;
+}
+
+.stripe {
+    background-color: #E4E4E4;
+}
+
+.white {
+    background-color: white;
+}
 /*------------------------------------------Map Box Related-------------------------------------------------------------------------------------------------------------------*/
 
 .goToLocation {
@@ -206,13 +260,13 @@ button:hover {
 }
 
 .next button {
-    background: -webkit-linear-gradient(left, #E5A000, #F3FF37);
+    background: -webkit-linear-gradient(#F3FF37, #E5A000);
     width: 370px;
     height: 55px;
 }
 
 .next button:hover {
-    background: -webkit-linear-gradient(left, #F3FF37, #E5A000);
+    background: -webkit-linear-gradient(#E5A000, #F3FF37);
     color: black;
     text-decoration: underline;
     cursor: pointer;    

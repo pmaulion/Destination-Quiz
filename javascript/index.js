@@ -24,8 +24,8 @@ $(function() {
 var gameScore = 0;
 var questionNumber = 0;    
 
-    $(".answerChoice").click(answer);
-        function answer() {
+    $(".correct").click(correct);
+        function correct() {
             // Transitions Color
             $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
             
@@ -45,16 +45,51 @@ var questionNumber = 0;
             // Switches current question number img to either Correct or Incorrect PNG
             $("#circle-1").attr("src", "images/checked.png");
 
-            // Remove pulse effect and add pre-pulse effect
+            // Remove pulse effect and add pre-pulse effect AND add effect to the next
             $("#circle-1-pulse").removeClass("question-pulse");
             $("#circle-1-pulse").addClass("pre-question-pulse");
+            $("#circle-2-pulse").addClass("question-pulse");
         };
+
+    $(".incorrect").click(incorrect);
+        function incorrect() {
+            // Transitions Color
+            $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
+            
+            // Transitinos text from "Travel to..." to "Correct Destination"
+            $("#transition-text").fadeOut(4000, function(){
+                $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
+            });
+
+            // Showing the whole answer page as well as fly-to mapbox feature
+            $(".answer-box").fadeIn(1000);
+            $("#map").show();
+            map.resize();
+            map.flyTo({
+                center: [4.352414, 50.846732],
+            });   
+
+            // Switches current question number img to either Correct or Incorrect PNG
+            $("#circle-1").attr("src", "images/cancel.png");
+
+            // Remove pulse effect and add pre-pulse effect AND add effect to the next
+            $("#circle-1-pulse").removeClass("question-pulse");
+            $("#circle-1-pulse").addClass("pre-question-pulse");
+            $("#circle-2-pulse").addClass("question-pulse");
+
+            //Changing "answer-verdict text to INCORRECT"
+            $("#answer-verdict").text("Aww man, your choice was incorrect. :(");
+            $("#answer-verdict").css("color", "#CC2107");
+        };
+        
 
 /*------------------------------------------Exit Lightbox-------------------------------------------------------------------------------------------------------------------*/
 
-    $(".next").click(function() {
-        $(".answer-box").fadeOut(1000);
-        });
+    $(".next").click(nextQuestion);
+        function nextQuestion () {
+            $(".answer-box").fadeOut(1000);
+
+        };
    
 /*------------------------------------------Map Box-------------------------------------------------------------------------------------------------------------------*/
         

@@ -5,6 +5,7 @@
         <title>Destination Quiz!</title>
         <link href='https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" type="text/css" href="css/quizstyles.css">
+        <link rel="stylesheet" type="text/css" href="css/quizanimations.css">
     </head>
     <body>
         <div class="answer-box">
@@ -15,29 +16,33 @@
             <div class="table-description">
                     <table class="answer-table">
                         <tr>
-                            <td>Flag</td>
-                            <td>Image</td>
+                            <td id="label-1">Category</td>
+                            <td id="label-2">Value</td>
                         </tr>
                         <tr>
-                            <td>Population</td>
-                            <td>Number</td>
+                            <td class="category-table, white">Country:</td>
+                            <td class="output-table, white" id="country-output">Belgium</td>
                         </tr>
                         <tr>
-                            <td>Area</td>
-                            <td>Number</td>
+                            <td class="category-table, stripe">Population:</td>
+                            <td class="output-table, stripe" id="population-output">1,175,173</td>
                         </tr>
                         <tr>
-                            <td>Area</td>
-                            <td>Number</td>
+                            <td class="category-table, white">Density:</td>
+                            <td class="output-table, white" id="density-output">16,857/sq mi</td>
                         </tr>
                         <tr>
-                            <td>Currency</td>
-                            <td>Euro (EUR)</td>
+                            <td class="category-table, stripe">Area:</td>
+                            <td class="output-table, stripe" id="area-output">62.2 sq mi</td>
+                        </tr>
+                        <tr>
+                            <td class="category-table, white">Currency:</td>
+                            <td class="output-table, white" id="currency-output">Euro (EUR)</td>
                         </tr>
                     </table>
             </div>
             <div class="answer-pic"></div>
-            <div class="answer-verdict"></div>
+            <div class="hatch" id="answer-verdict">Awesome! You're answer choice was correct!</div>
             <div class="next"><button>Next!</button></div>
         </div>
     
@@ -74,12 +79,12 @@
                          
             <table>
                 <tr>   
-                    <td><button class="answerChoice" class="correct" id="choiceA">A. Brussels, Belgium </button></td>
-                    <td><button class="answerChoice" class="incorrect" id="choiceB">B. Vienna, Austria </button></td>
+                    <td><button class="correct" id="choiceA">A. Brussels, Belgium </button></td>
+                    <td><button class="incorrect" id="choiceB">B. Vienna, Austria </button></td>
                 </tr>
                 <tr>   
-                    <td><button class="answerChoice" class="incorrect" id="choiceC">C. Luxembourg City, Luxembourg</button></td>
-                    <td><button class="answerChoice" class="incorrect" id="choiceD">D. Copenhagen, Denmark</button></td>
+                    <td><button class="incorrect" id="choiceC">C. Luxembourg City, Luxembourg</button></td>
+                    <td><button class="incorrect" id="choiceD">D. Copenhagen, Denmark</button></td>
                 </tr>
             </table> 
         </div>

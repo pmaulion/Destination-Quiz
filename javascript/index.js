@@ -7,7 +7,7 @@ $(function() {
     $("#start-button").click(startClick);
         
         function startEnter() {
-            $("#start-button").css({"background-color": "#353BAE", "color": "white", "text-decoration": "underline", "box-shadow": "0px 5px 5px black"})
+            $("#start-button").css({"background-color": "#353BAE", "color": "white", "text-decoration": "underline", "box-shadow": "0px 5px 10px black"})
         };
 
         function startExit() {
@@ -18,12 +18,30 @@ $(function() {
             window.location.href = "quiz.html";
         };
 
-/*------------------------------------------Quiz.html-------------------------------------------------------------------------------------------------------------------*/
-/*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
 
+/*------------------------------------------Quiz.html-------------------------------------------------------------------------------------------------------------------*/
 var gameScore = 0;
 var questionNumber = 0;    
+/*------------------------------------------Exit Lightbox-------------------------------------------------------------------------------------------------------------------*/
+    //Question 1 
+    $(".next").on("click", function() {
+             $(".answer-box").fadeOut(1000);
+             // ACTION TO CHANGE ANSWER CHOICES AND QUESTION IMAGE
+             $(".quiz-question").attr("src", "images/singapore-question.jpg");
+             // ACTIONS TO CHANGE ANSWER CHOICES A / B / C / D VALUES
+             $("#choiceA").text("A. London, UK");
+             $("#choiceB").text("B. Macau, China");
+             $("#choiceC").text("C. Republic of Singapore");
+             $("#choiceD").text("D. Bluewaters Island, UAE");
+             // ACTIONS TO CHANGE QUESTION PROMPT
+             $(".question-prompt").text("How about this location?");
+            // ACTIONS TO CHANGE CORRECT ANSWER FROM A TO C
+             $("#classA").addClass("incorrect").removeClass("correct");
+             $("#classC").addClass("correct").removeClass("incorrect");
+            
+    });
 
+/*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
     $(".correct").click(correct);
         function correct() {
             // Transitions Color
@@ -46,10 +64,15 @@ var questionNumber = 0;
             $("#circle-1").attr("src", "images/checked.png");
 
             // Remove pulse effect and add pre-pulse effect AND add effect to the next
-            $("#circle-1-pulse").removeClass("question-pulse");
-            $("#circle-1-pulse").addClass("pre-question-pulse");
+            $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
             $("#circle-2-pulse").addClass("question-pulse");
+
+            //Changing "answer-verdict text to CORRECT"
+            $("#answer-verdict").text("Awesome! You're answer choice was correct!");
+            $("#answer-verdict").css("color", "#007F0A");
         };
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     $(".incorrect").click(incorrect);
         function incorrect() {
@@ -73,8 +96,7 @@ var questionNumber = 0;
             $("#circle-1").attr("src", "images/cancel.png");
 
             // Remove pulse effect and add pre-pulse effect AND add effect to the next
-            $("#circle-1-pulse").removeClass("question-pulse");
-            $("#circle-1-pulse").addClass("pre-question-pulse");
+            $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
             $("#circle-2-pulse").addClass("question-pulse");
 
             //Changing "answer-verdict text to INCORRECT"
@@ -82,15 +104,6 @@ var questionNumber = 0;
             $("#answer-verdict").css("color", "#CC2107");
         };
         
-
-/*------------------------------------------Exit Lightbox-------------------------------------------------------------------------------------------------------------------*/
-
-    $(".next").click(nextQuestion);
-        function nextQuestion () {
-            $(".answer-box").fadeOut(1000);
-
-        };
-   
 /*------------------------------------------Map Box-------------------------------------------------------------------------------------------------------------------*/
         
     mapboxgl.accessToken = 'pk.eyJ1IjoicG1hdWxpb24iLCJhIjoiY2lza2c3dWhvMDRsbzJ6b2N4cnYwMG1jcyJ9.U3O1wyf6PiCUUPr3Ebr06g';

@@ -42,7 +42,7 @@
                     </table>
             </div>
             <div class="answer-pic"></div>
-            <div class="hatch" id="answer-verdict">Awesome! You're answer choice was correct!</div>
+            <div class="hatch" id="answer-verdict"></div>
             <div class="next"><button>Next!</button></div>
         </div>
     
@@ -71,20 +71,20 @@
                 
             </nav>
             
-            <img src="images/question1-pic.jpg" alt="Question Image">
+            <img class="quiz-question" src="images/question1-pic.jpg" alt="Question Image">
 
             <hr>
 
-            <h2>This location is:</h2> 
+            <h2 class="question-prompt">This location is:</h2> 
                          
             <table>
                 <tr>   
-                    <td><button class="correct" id="choiceA">A. Brussels, Belgium </button></td>
-                    <td><button class="incorrect" id="choiceB">B. Vienna, Austria </button></td>
+                    <td id="classA" class="correct"><button id="choiceA">A. Brussels, Belgium </button></td>
+                    <td id="classB" class="incorrect"><button id="choiceB">B. Vienna, Austria </button></td>
                 </tr>
                 <tr>   
-                    <td><button class="incorrect" id="choiceC">C. Luxembourg City, Luxembourg</button></td>
-                    <td><button class="incorrect" id="choiceD">D. Copenhagen, Denmark</button></td>
+                    <td id="classC" class="incorrect"><button id="choiceC">C. Luxembourg City, Luxembourg</button></td>
+                    <td id="classD" class="incorrect"><button id="choiceD">D. Copenhagen, Denmark</button></td>
                 </tr>
             </table> 
         </div>

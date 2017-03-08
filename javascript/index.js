@@ -23,17 +23,8 @@ $(function() {
 var gameScore = 0;
 var questionNumber = 0;    
 /*------------------------------------------Exit Lightbox Button-------------------------------------------------------------------------------------------------------------------*/
-        $(".next").on("click", function() {
-             $(".answer-box").fadeOut(1000);
-             // ACTION TO CHANGE ANSWER CHOICES AND QUESTION IMAGE
-             $(".quiz-question").attr("src", "images/singapore-question.jpg");
-             // ACTIONS TO CHANGE ANSWER CHOICES A / B / C / D VALUES
-             $("#choiceA").text("A. London, UK");
-             $("#choiceB").text("B. Macau, China");
-             $("#choiceC").text("C. Republic of Singapore");
-             $("#choiceD").text("D. Bluewaters Island, UAE");
-             // ACTIONS TO CHANGE QUESTION PROMPT
-             $(".question-prompt").text("How about this location?");
+        $(".next1").on("click", function() {
+             $(".answer-box1").fadeOut(1000);
         });        
 /*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
         $(".correct1").on("click", function() {
@@ -46,7 +37,7 @@ var questionNumber = 0;
                 });
 
                 // Showing the whole answer page as well as fly-to mapbox feature
-                $(".answer-box").fadeIn(1000);
+                $(".answer-box1").fadeIn(1000);
                 $("#map").show();
                 map.resize();
                 map.flyTo({
@@ -71,11 +62,11 @@ var questionNumber = 0;
                 
                 // Transitinos text from "Travel to..." to "Correct Destination"
                 $("#transition-text").fadeOut(4000, function(){
-                    $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
+                $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
                 });
 
                 // Showing the whole answer page as well as fly-to mapbox feature
-                $(".answer-box").fadeIn(1000);
+                $(".answer-box1").fadeIn(1000);
                 $("#map").show();
                 map.resize();
                 map.flyTo({

@@ -136,7 +136,7 @@ button:hover {
 
 /*---------------------------------------------------Lightbox CSS---------------------------------------------------------------------------------------*/
 
-.answer-box {
+.answer-box1 {
     display: none;
     position: fixed;
     top: 5%;
@@ -268,19 +268,19 @@ button:hover {
 
 /*------------------------------------------Exiting LightBox-------------------------------------------------------------------------------------------------------------------*/
 
-.next {
+.next1 {
     position: relative;
     top: 29%;
     left: 64%;
 }
 
-.next button {
+.next1 button {
     background: -webkit-linear-gradient(#F3FF37, #E5A000);
     width: 370px;
     height: 55px;
 }
 
-.next button:hover {
+.next1 button:hover {
     background: -webkit-linear-gradient(#E5A000, #F3FF37);
     color: black;
     text-decoration: underline;

@@ -18,7 +18,15 @@ body, html {
 }
 /*---------------------------------------------------Content---------------------------------------------------------------------------------------*/
 
+.nav-container {
+    position: fixed;
+    left: 19.4%;
+    top: 2%;
+}
+
 nav {
+    background-color: white;
+    opacity: .7;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -69,6 +77,14 @@ nav {
     width: 52px;
     border: none;
     z-index: 10;
+}
+
+.question-spacing {
+    margin-bottom: 150px;
+}
+
+.image-spacing {
+    margin-top: 100px;
 }
 
 img {

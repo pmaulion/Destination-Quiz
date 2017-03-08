@@ -22,9 +22,8 @@ $(function() {
 /*------------------------------------------Quiz.html-------------------------------------------------------------------------------------------------------------------*/
 var gameScore = 0;
 var questionNumber = 0;    
-/*------------------------------------------Exit Lightbox-------------------------------------------------------------------------------------------------------------------*/
-    //Question 1 
-    $(".next").on("click", function() {
+/*------------------------------------------Exit Lightbox Button-------------------------------------------------------------------------------------------------------------------*/
+        $(".next").on("click", function() {
              $(".answer-box").fadeOut(1000);
              // ACTION TO CHANGE ANSWER CHOICES AND QUESTION IMAGE
              $(".quiz-question").attr("src", "images/singapore-question.jpg");
@@ -35,75 +34,66 @@ var questionNumber = 0;
              $("#choiceD").text("D. Bluewaters Island, UAE");
              // ACTIONS TO CHANGE QUESTION PROMPT
              $(".question-prompt").text("How about this location?");
-            // ACTIONS TO CHANGE CORRECT ANSWER FROM A TO C
-             $("#classA").addClass("incorrect").removeClass("correct");
-             $("#classC").addClass("correct").removeClass("incorrect");
-            
-    });
-
+        });        
 /*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
-    $(".correct").click(correct);
-        function correct() {
-            // Transitions Color
-            $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
-            
-            // Transitinos text from "Travel to..." to "Correct Destination"
-            $("#transition-text").fadeOut(4000, function(){
-                $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
-            });
+        $(".correct1").on("click", function() {
+                // Transitions Color
+                $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
+                
+                // Transitinos text from "Travel to..." to "Correct Destination"
+                $("#transition-text").fadeOut(4000, function(){
+                    $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
+                });
 
-            // Showing the whole answer page as well as fly-to mapbox feature
-            $(".answer-box").fadeIn(1000);
-            $("#map").show();
-            map.resize();
-            map.flyTo({
-                center: [4.352414, 50.846732],
-            });   
+                // Showing the whole answer page as well as fly-to mapbox feature
+                $(".answer-box").fadeIn(1000);
+                $("#map").show();
+                map.resize();
+                map.flyTo({
+                    center: [4.352414, 50.846732],
+                });   
 
-            // Switches current question number img to either Correct or Incorrect PNG
-            $("#circle-1").attr("src", "images/checked.png");
+                // Switches current question number img to either Correct or Incorrect PNG
+                $("#circle-1").attr("src", "images/checked.png");
 
-            // Remove pulse effect and add pre-pulse effect AND add effect to the next
-            $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
-            $("#circle-2-pulse").addClass("question-pulse");
+                // Remove pulse effect and add pre-pulse effect AND add effect to the next
+                $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
+                $("#circle-2-pulse").addClass("question-pulse");
 
-            //Changing "answer-verdict text to CORRECT"
-            $("#answer-verdict").text("Awesome! You're answer choice was correct!");
-            $("#answer-verdict").css("color", "#007F0A");
-        };
+                //Changing "answer-verdict text to CORRECT"
+                $("#answer-verdict").text("Awesome! You're answer choice was correct!");
+                $("#answer-verdict").css("color", "#007F0A");
+        });
 
-// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        $(".incorrect1").on("click", function() {
+                // Transitions Color
+                $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
+                
+                // Transitinos text from "Travel to..." to "Correct Destination"
+                $("#transition-text").fadeOut(4000, function(){
+                    $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
+                });
 
-    $(".incorrect").click(incorrect);
-        function incorrect() {
-            // Transitions Color
-            $("#goToLocation").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
-            
-            // Transitinos text from "Travel to..." to "Correct Destination"
-            $("#transition-text").fadeOut(4000, function(){
-                $("#transition-text").text('Welkom bij Brussels!').fadeIn(4000);
-            });
+                // Showing the whole answer page as well as fly-to mapbox feature
+                $(".answer-box").fadeIn(1000);
+                $("#map").show();
+                map.resize();
+                map.flyTo({
+                    center: [4.352414, 50.846732],
+                });   
 
-            // Showing the whole answer page as well as fly-to mapbox feature
-            $(".answer-box").fadeIn(1000);
-            $("#map").show();
-            map.resize();
-            map.flyTo({
-                center: [4.352414, 50.846732],
-            });   
+                // Switches current question number img to either Correct or Incorrect PNG
+                $("#circle-1").attr("src", "images/cancel.png");
 
-            // Switches current question number img to either Correct or Incorrect PNG
-            $("#circle-1").attr("src", "images/cancel.png");
+                // Remove pulse effect and add pre-pulse effect AND add effect to the next
+                $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
+                $("#circle-2-pulse").addClass("question-pulse");
 
-            // Remove pulse effect and add pre-pulse effect AND add effect to the next
-            $("#circle-1-pulse").removeClass("question-pulse").addClass("pre-question-pulse");
-            $("#circle-2-pulse").addClass("question-pulse");
+                //Changing "answer-verdict text to INCORRECT"
+                $("#answer-verdict").text("Aww man, your choice was incorrect. :(");
+                $("#answer-verdict").css("color", "#CC2107");
+        });
 
-            //Changing "answer-verdict text to INCORRECT"
-            $("#answer-verdict").text("Aww man, your choice was incorrect. :(");
-            $("#answer-verdict").css("color", "#CC2107");
-        };
-        
 /*------------------------------------------Map Box-------------------------------------------------------------------------------------------------------------------*/
         
     mapboxgl.accessToken = 'pk.eyJ1IjoicG1hdWxpb24iLCJhIjoiY2lza2c3dWhvMDRsbzJ6b2N4cnYwMG1jcyJ9.U3O1wyf6PiCUUPr3Ebr06g';

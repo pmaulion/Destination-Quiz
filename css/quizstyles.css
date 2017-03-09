@@ -88,6 +88,7 @@ nav {
 }
 
 img {
+    max-width: 100%;
     display: block;
     margin: 0px;
     border: 1px solid gray;
@@ -135,7 +136,7 @@ button:hover {
 }
 
 /*---------------------------------------------------Lightbox CSS---------------------------------------------------------------------------------------*/
-
+/*--------Answer Boxes---------*/
 .answer-box1 {
     display: none;
     position: fixed;
@@ -149,18 +150,21 @@ button:hover {
     border-radius: 5px;
 }
 
-#map {
+.answer-box2 {
     display: none;
-    position: absolute;
-    top: 2%;
-    left: 62%;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid black;
-    border-top-right-radius: 5px;
-    height: 60%;
-    width: 37%;
+    border-radius: 5px;
 }
 
-.answer-pic {
+/*---------Answer Pictures----------*/
+.answer-pic1 {
     position: relative;
     top: 2%;
     left: 1%;
@@ -174,9 +178,45 @@ button:hover {
     width: 60%;
 }
 
+.answer-pic2 {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-image: url(../images/singapore-answer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    height: 60%;
+    width: 60%;
+}
+
+/*---------MAP PICTURES----------*/
+#map1 {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    height: 60%;
+    width: 37%;
+}
+
+#map2 {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    height: 60%;
+    width: 37%;
+}
 /*------------------------------------------Answer Box-------------------------------------------------------------------------------------------------------------------*/
 
-#answer-verdict {
+#answer-verdict1 {
     padding: 30px 5px 0px 5px;
     position: absolute;
     text-align: center;
@@ -192,6 +232,21 @@ button:hover {
     border-radius: 5px;
 }
 
+#answer-verdict2 {
+    padding: 30px 5px 0px 5px;
+    position: absolute;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 36px;
+    width: 37%;
+    height: 23%;
+    left: 62%;
+    top: 63.5%;
+    background-color: white;
+    opacity: .8;
+    border: 1px solid black;   
+    border-radius: 5px;
+}
 /*------------------------------------------Light Box Description Table-------------------------------------------------------------------------------------------------------------------*/
 
 .table-description {
@@ -267,7 +322,7 @@ button:hover {
 }
 
 /*------------------------------------------Exiting LightBox-------------------------------------------------------------------------------------------------------------------*/
-
+/*---------Next Button 1----------*/
 .next1 {
     position: relative;
     top: 29%;
@@ -281,6 +336,26 @@ button:hover {
 }
 
 .next1 button:hover {
+    background: -webkit-linear-gradient(#E5A000, #F3FF37);
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;    
+}
+
+/*---------Next Button 2----------*/
+.next2 {
+    position: relative;
+    top: 29%;
+    left: 64%;
+}
+
+.next2 button {
+    background: -webkit-linear-gradient(#F3FF37, #E5A000);
+    width: 370px;
+    height: 55px;
+}
+
+.next2 button:hover {
     background: -webkit-linear-gradient(#E5A000, #F3FF37);
     color: black;
     text-decoration: underline;

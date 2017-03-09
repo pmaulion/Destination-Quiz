@@ -99,7 +99,7 @@ var questionNumber = 0;
                 
                 // Transitinos text from "Travel to..." to "Correct Destination"
                 $("#transition-text2").fadeOut(4000, function(){
-                $("#transition-text2").text('Welkom to Singapore!').fadeIn(4000);
+                $("#transition-text2").text('Selamat datang ke Singapore').fadeIn(4000);
                 });
 
                 // Showing the whole answer page as well as fly-to mapbox feature
@@ -107,7 +107,7 @@ var questionNumber = 0;
                 $("#map2").show();
                 map2.resize();
                 map2.flyTo({
-                    center: [4, 29.846732],
+                    center: [103.8545, 1.286794],
                 });   
 
                 // Switches current question number img to either Correct or Incorrect PNG
@@ -128,7 +128,7 @@ var questionNumber = 0;
                 
                 // Transitinos text from "Travel to..." to "Correct Destination"
                 $("#transition-text2").fadeOut(4000, function(){
-                $("#transition-text2").text('Welkom to Singapore!').fadeIn(4000);
+                $("#transition-text2").text('Selamat datang ke Singapore!').fadeIn(4000);
                 });
 
                 // Showing the whole answer page as well as fly-to mapbox feature
@@ -136,7 +136,7 @@ var questionNumber = 0;
                 $("#map2").show();
                 map2.resize();
                 map2.flyTo({
-                    center: [4.352414, 29.846732],
+                    center: [103.8545, 1.286794],
                 });   
 
                 // Switches current question number img to either Correct or Incorrect PNG

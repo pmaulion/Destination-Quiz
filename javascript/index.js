@@ -40,12 +40,14 @@ var questionNumber = 0;
         });
 
         $(".next5").on("click", function() {
-             $(".answer-box5").fadeOut(1000);
+             window.location.href = "end.html";
         });        
 /*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
         // Question 1
 
         $(".correct1").on("click", function() {
+                // Tracking Score
+                gameScore = gameScore + 1;
                 // Transitions Color
                 $("#goToLocation1").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -106,6 +108,8 @@ var questionNumber = 0;
         // Question 2
 
         $(".correct2").on("click", function() {
+                // Tracking Score
+                gameScore = gameScore + 1;
                 // Transitions Color
                 $("#goToLocation2").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -166,6 +170,8 @@ var questionNumber = 0;
         // Question 3
 
                 $(".correct3").on("click", function() {
+                // Tracking Score
+                gameScore = gameScore + 1;
                 // Transitions Color
                 $("#goToLocation3").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -226,6 +232,8 @@ var questionNumber = 0;
         // Question 4
 
                 $(".correct4").on("click", function() {
+                // Tracking Score
+                gameScore = gameScore + 1;
                 // Transitions Color
                 $("#goToLocation4").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -286,6 +294,8 @@ var questionNumber = 0;
         // Question 5
 
                 $(".correct5").on("click", function() {
+                // Tracking Score
+                gameScore = gameScore + 1;
                 // Transitions Color
                 $("#goToLocation5").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 

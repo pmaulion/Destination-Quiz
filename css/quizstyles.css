@@ -163,6 +163,44 @@ button:hover {
     border-radius: 5px;
 }
 
+.answer-box3 {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.answer-box4 {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.answer-box5 {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+    border-radius: 5px;
+}
 /*---------Answer Pictures----------*/
 .answer-pic1 {
     position: relative;
@@ -192,6 +230,47 @@ button:hover {
     width: 60%;
 }
 
+.answer-pic3 {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-image: url(../images/dubai-answer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    height: 60%;
+    width: 60%;
+}
+
+.answer-pic4 {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-image: url(../images/zurich-answer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    height: 60%;
+    width: 60%;
+}
+
+.answer-pic5 {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-image: url(../images/rio-answer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    height: 60%;
+    width: 60%;
+}
 /*---------MAP PICTURES----------*/
 #map1 {
     display: none;
@@ -205,6 +284,39 @@ button:hover {
 }
 
 #map2 {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    height: 60%;
+    width: 37%;
+}
+
+#map3 {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    height: 60%;
+    width: 37%;
+}
+
+#map4 {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 62%;
+    border: 1px solid black;
+    border-top-right-radius: 5px;
+    height: 60%;
+    width: 37%;
+}
+
+#map5 {
     display: none;
     position: absolute;
     top: 2%;
@@ -233,6 +345,54 @@ button:hover {
 }
 
 #answer-verdict2 {
+    padding: 30px 5px 0px 5px;
+    position: absolute;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 36px;
+    width: 37%;
+    height: 23%;
+    left: 62%;
+    top: 63.5%;
+    background-color: white;
+    opacity: .8;
+    border: 1px solid black;   
+    border-radius: 5px;
+}
+
+#answer-verdict3 {
+    padding: 30px 5px 0px 5px;
+    position: absolute;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 36px;
+    width: 37%;
+    height: 23%;
+    left: 62%;
+    top: 63.5%;
+    background-color: white;
+    opacity: .8;
+    border: 1px solid black;   
+    border-radius: 5px;
+}
+
+#answer-verdict4 {
+    padding: 30px 5px 0px 5px;
+    position: absolute;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 36px;
+    width: 37%;
+    height: 23%;
+    left: 62%;
+    top: 63.5%;
+    background-color: white;
+    opacity: .8;
+    border: 1px solid black;   
+    border-radius: 5px;
+}
+
+#answer-verdict5 {
     padding: 30px 5px 0px 5px;
     position: absolute;
     text-align: center;
@@ -280,6 +440,30 @@ button:hover {
 }
 
 #label-2 {
+    background-color: #353BAE;
+    border-top-right-radius: 5px;
+    color: white;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#label-3 {
+    background-color: #353BAE;
+    border-top-right-radius: 5px;
+    color: white;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#label-4 {
+    background-color: #353BAE;
+    border-top-right-radius: 5px;
+    color: white;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#label-5 {
     background-color: #353BAE;
     border-top-right-radius: 5px;
     color: white;
@@ -362,6 +546,65 @@ button:hover {
     cursor: pointer;    
 }
 
+/*---------Next Button 3----------*/
+.next3 {
+    position: relative;
+    top: 29%;
+    left: 64%;
+}
+
+.next3 button {
+    background: -webkit-linear-gradient(#F3FF37, #E5A000);
+    width: 370px;
+    height: 55px;
+}
+
+.next3 button:hover {
+    background: -webkit-linear-gradient(#E5A000, #F3FF37);
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;    
+}
+
+/*---------Next Button 4----------*/
+.next4 {
+    position: relative;
+    top: 29%;
+    left: 64%;
+}
+
+.next4 button {
+    background: -webkit-linear-gradient(#F3FF37, #E5A000);
+    width: 370px;
+    height: 55px;
+}
+
+.next4 button:hover {
+    background: -webkit-linear-gradient(#E5A000, #F3FF37);
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;    
+}
+
+/*---------Next Button 5----------*/
+.next5 {
+    position: relative;
+    top: 29%;
+    left: 64%;
+}
+
+.next5 button {
+    background: -webkit-linear-gradient(#F3FF37, #E5A000);
+    width: 370px;
+    height: 55px;
+}
+
+.next5 button:hover {
+    background: -webkit-linear-gradient(#E5A000, #F3FF37);
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;    
+}
 /*------------------------------------------Pulse Animation-------------------------------------------------------------------------------------------------------------------*/
 
 @-moz-keyframes pulse {

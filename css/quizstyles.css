@@ -95,17 +95,20 @@ img {
     border-radius: 10px;
     height: 480px;
     width: 100%;
+    z-index: 3;
 }
 
 h2 {
     font-family: Tahoma;
     margin: 0px;
+    z-index: 3;
 }
 
 hr {
     margin: 10px 0;
     border: 2px solid black;
     width: 100%;
+    z-index: 3;
 }
 
 /*---------------------------------------------------Question Table---------------------------------------------------------------------------------------*/
@@ -114,6 +117,7 @@ table {
     width: 900px;
     border-spacing: 20px;
     margin: 0 auto;
+    z-index: 3;
 }
 
 button {
@@ -605,6 +609,74 @@ button:hover {
     text-decoration: underline;
     cursor: pointer;    
 }
+
+/*------------------------------------------Cloud Section-------------------------------------------------------------------------------------------------------------------*/
+.cloud-L1 {
+    width: 400px;
+    height: 400px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 29%;
+    left: 1%;
+    z-index: 0;
+}
+
+.cloud-L2 {
+    width: 145px;
+    height: 145px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 12%;
+    left: 2%;
+    z-index: 0;
+}
+
+.cloud-L3 {
+    width: 225px;
+    height: 225px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 7%;
+    left: 11%;
+    z-index: 0;
+}
+
+.cloud-R1 {
+    width: 375px;
+    height: 375px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 20%;
+    left: 75%;
+    z-index: 1;
+}
+
+.cloud-R2 {
+    width: 125px;
+    height: 125px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 12%;
+    left: 92%;
+    z-index: 0;
+}
+
+.cloud-R3 {
+    width: 190px;
+    height: 190px;
+    display: inline;
+    border: none;
+    position: fixed;
+    top: 8%;
+    left: 75%;
+    z-index: 0;
+}
+
 /*------------------------------------------Pulse Animation-------------------------------------------------------------------------------------------------------------------*/
 
 @-moz-keyframes pulse {

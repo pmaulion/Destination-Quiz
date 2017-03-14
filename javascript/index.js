@@ -24,22 +24,43 @@ var gameScore = 0;
 var questionNumber = 0;    
 /*------------------------------------------Exit Lightbox Button-------------------------------------------------------------------------------------------------------------------*/
         $(".next1").on("click", function() {
+            // Hide answer box
              $(".answer-box1").fadeOut(1000);
+             // Scroll to next Question
+             $('html, body').animate({
+                scrollTop: ($("#img-2").offset().top - 110)
+                }, 1500);
         });
 
         $(".next2").on("click", function() {
+            // Hide answer box
              $(".answer-box2").fadeOut(1000);
+             // Scroll to next Question
+             $('html, body').animate({
+                scrollTop: ($("#img-3").offset().top - 110)
+                }, 1500);
         });
 
         $(".next3").on("click", function() {
+            // Hide answer box
              $(".answer-box3").fadeOut(1000);
+             // Scroll to next Question
+             $('html, body').animate({
+                scrollTop: ($("#img-4").offset().top - 110)
+                }, 1500);
         });
 
         $(".next4").on("click", function() {
+            // Hide answer box
              $(".answer-box4").fadeOut(1000);
+             // Scroll to next Question
+             $('html, body').animate({
+                scrollTop: ($("#img-5").offset().top - 110)
+                }, 1500);
         });
 
         $(".next5").on("click", function() {
+            // Hide answer box
              window.location.href = "end.html";
         });        
 /*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/

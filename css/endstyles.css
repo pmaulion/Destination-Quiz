@@ -4,6 +4,67 @@ body  {
     background-color: black;
 }
 
+.game-title {
+    background-image: url(../images/gameover.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    position: relative;
+    left: 8%;
+    bottom: 650px;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    height: 165px;
+    width: 1192px;
+    opacity: .75;
+}
+
+.intro-score {
+    position: relative;
+    bottom: 575px;
+    background-color: white;
+    opacity: .75;
+    height: 270px;
+    padding-top: 10px;
+    border: 1px solid black;
+    font-family: Tahoma;
+    font-size: 48px;
+    text-align: center;
+}
+
+.out-of-5 {
+    margin-top: 30px;
+    font-size: 64px;
+}
+
+.play-again {
+    background-color: #FFFFFF;
+    font-family: Tahoma;
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    margin-top: 45px;
+}
+
+.play-again:hover {
+    background-color: #353BAE;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.credits {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: white;
+    position: relative;
+    bottom: 465px;
+    text-align: center;
+}
+
+/*-------------------------DON'T TOUCH BACKGROUND ANIMATION ------------------------------------------------------------------------------------*/
 .homepage-banner {
     border-right: none;
     border-left: none;

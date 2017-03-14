@@ -55,7 +55,7 @@ var questionNumber = 0;
              $(".answer-box4").fadeOut(1000);
              // Scroll to next Question
              $('html, body').animate({
-                scrollTop: ($("#img-5").offset().top - 110)
+                scrollTop: ($("#img-5").offset().top -110)
                 }, 1500);
         });
 

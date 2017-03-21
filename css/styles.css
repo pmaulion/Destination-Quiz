@@ -11,7 +11,7 @@ body {
     position: relative;
     background-repeat: no-repeat;
     border-radius: 20px;
-    bottom: 700px;
+    bottom: 850px;
     height: 339px;
     width: 1192px;
     margin: 0 auto;
@@ -26,7 +26,7 @@ body {
     width: 400px;
     font-size: 40px;
     border-radius: 10px;
-    top: 530px;
+    top: 690px;
     left: 350px;
     letter-spacing: 2px;
 }
@@ -37,7 +37,7 @@ body {
     color: white;
     position: absolute;
     margin: 0px;
-    top: 660px;
+    top: 820px;
     left: 430px;
 }
 

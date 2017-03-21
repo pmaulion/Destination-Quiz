@@ -15,13 +15,12 @@ $(function() {
         };
 
         function startClick() {
-            window.location.href = "quiz.html";
+            window.open("quiz.html", "_self");
+            localStorage.setItem("score", "0");
         };
 
-
 /*------------------------------------------Quiz.html-------------------------------------------------------------------------------------------------------------------*/
-var gameScore = 0;
-var questionNumber = 0;    
+
 /*------------------------------------------Exit Lightbox Button-------------------------------------------------------------------------------------------------------------------*/
         $(".next1").on("click", function() {
             // Hide answer box
@@ -61,14 +60,14 @@ var questionNumber = 0;
 
         $(".next5").on("click", function() {
             // Hide answer box
-             window.location.href = "end.html";
+             window.open("end.html", "_self");
         });        
 /*------------------------------------------Choices A / B / C / D-------------------------------------------------------------------------------------------------------------------*/
         // Question 1
 
         $(".correct1").on("click", function() {
                 // Tracking Score
-                gameScore = gameScore + 1;
+                localStorage.setItem("score", "1");
                 // Transitions Color
                 $("#goToLocation1").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -130,7 +129,7 @@ var questionNumber = 0;
 
         $(".correct2").on("click", function() {
                 // Tracking Score
-                gameScore = gameScore + 1;
+                localStorage.setItem("score", "2");
                 // Transitions Color
                 $("#goToLocation2").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -192,7 +191,7 @@ var questionNumber = 0;
 
                 $(".correct3").on("click", function() {
                 // Tracking Score
-                gameScore = gameScore + 1;
+                localStorage.setItem("score", "3");
                 // Transitions Color
                 $("#goToLocation3").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -254,7 +253,7 @@ var questionNumber = 0;
 
                 $(".correct4").on("click", function() {
                 // Tracking Score
-                gameScore = gameScore + 1;
+                localStorage.setItem("score", "4");
                 // Transitions Color
                 $("#goToLocation4").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -316,7 +315,7 @@ var questionNumber = 0;
 
                 $(".correct5").on("click", function() {
                 // Tracking Score
-                gameScore = gameScore + 1;
+                localStorage.setItem("score", "5");
                 // Transitions Color
                 $("#goToLocation5").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -412,5 +411,19 @@ var questionNumber = 0;
         center: [-73.990208, 40.739848],
         zoom: 12
         });
+
+/*------------------------------------------End.html-------------------------------------------------------------------------------------------------------------------*/
+    
+    $('#playerScore').ready(function(){
+        var gameScore = localStorage.getItem("score");
+        $('#playerScore').text(gameScore);
+    });
+
+    $("#playAgain").click(function() {
+        window.location.href = "index.html";  
+    });
+
+
+
 // Below is end of index.js
 }); 

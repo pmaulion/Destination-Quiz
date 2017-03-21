@@ -1,21 +1,5 @@
 $( document ).ready(function() {
 
-    $("#playAgain").click(function() {
-        window.location.href = "index.html";  
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------DON'T TOUCH BACKGROUND ANIMATION JAVASCRIPT ------------------------------------------------------------------------------------*/
     scaleAnimationContainer();
 

@@ -1,5 +1,6 @@
 $(function() {
 
+      var score = 0;
 /*------------------------------------------Index.html-------------------------------------------------------------------------------------------------------------------*/
 
     $("#start-button").mouseenter(startEnter);
@@ -16,7 +17,8 @@ $(function() {
 
         function startClick() {
             window.open("quiz.html", "_self");
-            localStorage.setItem("score", "0");
+            score = 0
+            localStorage.setItem("score", score);
         };
 
 /*------------------------------------------Quiz.html-------------------------------------------------------------------------------------------------------------------*/
@@ -67,7 +69,8 @@ $(function() {
 
         $(".correct1").on("click", function() {
                 // Tracking Score
-                localStorage.setItem("score", "1");
+                score = score + 1;
+                localStorage.setItem("score", score);
                 // Transitions Color
                 $("#goToLocation1").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -129,7 +132,8 @@ $(function() {
 
         $(".correct2").on("click", function() {
                 // Tracking Score
-                localStorage.setItem("score", "2");
+                score = score + 1;
+                localStorage.setItem("score", score);
                 // Transitions Color
                 $("#goToLocation2").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -191,7 +195,8 @@ $(function() {
 
                 $(".correct3").on("click", function() {
                 // Tracking Score
-                localStorage.setItem("score", "3");
+                score = score + 1;
+                localStorage.setItem("score", score);
                 // Transitions Color
                 $("#goToLocation3").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -253,7 +258,8 @@ $(function() {
 
                 $(".correct4").on("click", function() {
                 // Tracking Score
-                localStorage.setItem("score", "4");
+                score = score + 1;
+                localStorage.setItem("score", score);
                 // Transitions Color
                 $("#goToLocation4").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -315,7 +321,8 @@ $(function() {
 
                 $(".correct5").on("click", function() {
                 // Tracking Score
-                localStorage.setItem("score", "5");
+                score = score + 1;
+                localStorage.setItem("score", score);
                 // Transitions Color
                 $("#goToLocation5").animate({backgroundColor: "#353BAE", "opacity": .85, color: "white"}, 10000);
                 
@@ -370,6 +377,17 @@ $(function() {
                 $("#answer-verdict5").text("Aww man, your choice was incorrect. :(");
                 $("#answer-verdict5").css("color", "#CC2107");
         });
+
+/*------------------------------------------End.html-------------------------------------------------------------------------------------------------------------------*/
+        
+        var gameScore = localStorage.getItem("score");
+        $('#playerScore').text(gameScore);
+
+
+        $("#playAgain").click(function() {
+            window.open("index.html", "_self");  
+        });
+        
 /*------------------------------------------Map Box-------------------------------------------------------------------------------------------------------------------*/
         
     mapboxgl.accessToken = 'pk.eyJ1IjoicG1hdWxpb24iLCJhIjoiY2lza2c3dWhvMDRsbzJ6b2N4cnYwMG1jcyJ9.U3O1wyf6PiCUUPr3Ebr06g';
@@ -411,19 +429,6 @@ $(function() {
         center: [-73.990208, 40.739848],
         zoom: 12
         });
-
-/*------------------------------------------End.html-------------------------------------------------------------------------------------------------------------------*/
-    
-    $('#playerScore').ready(function(){
-        var gameScore = localStorage.getItem("score");
-        $('#playerScore').text(gameScore);
-    });
-
-    $("#playAgain").click(function() {
-        window.location.href = "index.html";  
-    });
-
-
 
 // Below is end of index.js
 }); 
